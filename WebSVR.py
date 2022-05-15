@@ -2,9 +2,8 @@ from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 import sys
 
 PORT = int(input("input port number: "))
-ADDRESS = ('', PORT)
 
-httpd = ThreadingHTTPServer(ADDRESS,SimpleHTTPRequestHandler)
+httpd = ThreadingHTTPServer(('',PORT),SimpleHTTPRequestHandler)
 print("Server is running! http://localhost:"+str(PORT)+"\nPress Ctrl+C to stop the server.")
 
 try:
