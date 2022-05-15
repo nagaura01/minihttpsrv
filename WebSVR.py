@@ -5,7 +5,7 @@ PORT = int(input("input port number: "))
 ADDRESS = ('', PORT)
 
 httpd = ThreadingHTTPServer(ADDRESS,SimpleHTTPRequestHandler)
-print("Server is running!",ADDRESS,"\nPress Ctrl+C to stop the server.")
+print("Server is running! http://localhost:"+str(PORT)+"\nPress Ctrl+C to stop the server.")
 
 try:
     while True:
